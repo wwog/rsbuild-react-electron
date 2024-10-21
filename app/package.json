@@ -1,0 +1,14 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "./main/index.js",
+  "author": "wwog",
+  "license": "ISC",
+  "scripts": {
+    "link-module": "tsx ../scripts/link-modules.ts",
+    "rebuild": "tsx ../scripts/electron-rebuild.ts",
+    "postinstall": "npm run rebuild && npm run link-module"
+  },
+  "dependencies": {
+  }
+}

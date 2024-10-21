@@ -1,0 +1,9 @@
+node_modules
+build
+dist
+release
+.cache
+app/*
+!app/package.json
+pnpm-lock.yaml
+.idea

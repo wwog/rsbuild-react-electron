@@ -1,0 +1,87 @@
+{
+  "productName": "Application",
+  "appId": "com.Application.mac",
+  "icon": "assets/icons/256x256.png",
+  "copyright": "Copyright © 2024 Application",
+  "npmRebuild": false,
+  "files": [
+    "main",
+    "preload",
+    "renderer",
+    "node_modules"
+  ],
+  "directories": {
+    "app": "app",
+    "output": "release",
+    "buildResources": "assets"
+  },
+  "extraFiles": [
+    {
+      "from": "extra/files/${os}/**",
+      "to": "."
+    }
+  ],
+  "extraResources": [
+    "./assets/**"
+  ],
+  "asar": false,
+  "nsis": {
+    "perMachine": true,
+    "oneClick": false,
+    "warningsAsErrors": false,
+    "deleteAppDataOnUninstall": true,
+    "allowElevation": true,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "win": {
+    "target": [
+      "zip",
+      "nsis"
+    ],
+    "artifactName": "${productName}_Win_${arch}_64bit_V${version}.${ext}"
+  },
+  "mac": {
+    "notarize": false,
+    "icon": "assets/icons/512x512.png",
+    "target": {
+      "target": "default",
+      "arch": [
+        "arm64",
+        "x64"
+      ]
+    },
+    "extendInfo": {
+      "NSCameraUsageDescription": "This app requires camera access to record video.",
+      "NSMicrophoneUsageDescription": "This app requires microphone access to record audio."
+    },
+    "signIgnore": "(.*)screenshots(.*?)\\.node$",
+    "type": "distribution",
+    "hardenedRuntime": true,
+    "entitlements": "assets/entitlements.mac.plist",
+    "entitlementsInherit": "assets/entitlements.mac.plist",
+    "gatekeeperAssess": false,
+    "artifactName": "${productName}_Mac_${arch}_64bit_V${version}.${ext}"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  },
+  "publish": [
+    {
+      "provider": "generic",
+      "url": "https://127.0.0.1/"
+    }
+  ]
+}

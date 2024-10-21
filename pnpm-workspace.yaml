@@ -1,0 +1,6 @@
+packages:
+  # all packages
+  - "packages/*"
+
+  # app directory only add native dependencies, Do not add the app directory
+  # pnpm node_modules will not find dependencies after packaging

@@ -1,0 +1,9 @@
+{
+  "name": "i18n",
+  "files": [
+    "out"
+  ],
+  "scripts": {
+    "gen": "tsx csv2Json.ts ./base.csv out"
+  }
+}

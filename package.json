@@ -1,0 +1,37 @@
+{
+  "name": "rsbuild-electron",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "concurrently \"pnpm run:renderer\" \"pnpm run:main\"",
+    "run:main": "pnpm -F preload run build:dev && pnpm -F main run start",
+    "run:renderer": "pnpm -F renderer run dev",
+    "build": "pnpm -F main -F renderer build && pnpm -F preload build:force",
+    "build:dev": "pnpm -F main -F renderer build:dev && pnpm -F preload build:dev:force",
+    "package:pack": "electron-builder build -c ./config/build.config.json --dir",
+    "package:release": "electron-builder build -c ./config/release.build.config.js",
+    "postinstall": "pnpm installApp",
+    "installApp": "tsx ./scripts/installApp.ts",
+    "check": "biome check --write",
+    "format": "biome format --write"
+  },
+  "dependencies": {
+    "logger": "workspace:*"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@electron/rebuild": "^3.7.0",
+    "@rsbuild/core": "^1.0.16",
+    "@types/node": "^22.7.7",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^33.0.1",
+    "electron-builder": "^25.1.8",
+    "mime-types": "^2.1.35",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "pnpm@9.12.2"
+}
