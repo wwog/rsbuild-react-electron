@@ -108,7 +108,13 @@ export class Logger {
    */
   static async remove7daysAgo(logDir: string) {
     Logger.info('Start Remove logDir 7 days ago')
-    const files = await readdir(logDir)
+    let files: string[] = []
+    try {
+       files = await readdir(logDir)
+    } catch (error) {
+      Logger.info('No log files to remove')
+      return
+    }
     const now = Date.now()
     const sevenDays = 7 * 24 * 60 * 60 * 1000
     for (const file of files) {
