@@ -7,3 +7,4 @@ app/*
 !app/package.json
 pnpm-lock.yaml
 .idea
+.DS_Store
