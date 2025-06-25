@@ -1,5 +1,5 @@
 [production]
-chrome >= 138
+chrome >= 136
 
 [development]
-chrome >= 138
+chrome >= 136
