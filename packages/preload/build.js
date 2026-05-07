@@ -120,6 +120,7 @@ async function build() {
         output: {
           externals: ['electron'],
           target: 'node',
+          module: false,
           cleanDistPath: true,
           distPath: {
             root: distDir,

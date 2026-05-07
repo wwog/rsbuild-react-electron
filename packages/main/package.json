@@ -7,6 +7,6 @@
 	},
 	"dependencies": {
 		"i18n": "workspace:*",
-		"electron-store": "^10.1.0"
+		"electron-store": "^11.0.2"
 	}
 }

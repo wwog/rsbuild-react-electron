@@ -1,6 +1,6 @@
 {
   "name": "logger",
   "peerDependencies": {
-    "electron": "^36"
+    "electron": "^42"
   }
 }

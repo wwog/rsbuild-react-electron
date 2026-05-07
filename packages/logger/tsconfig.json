@@ -5,7 +5,8 @@
     "lib": ["ESNext"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "allowJs": true
+    "allowJs": true,
+    "types": ["../@types/global.d.ts"]
   },
   "include": ["**/*.ts"]
 }

@@ -13,6 +13,7 @@ export default defineConfig({
   },
   output: {
     target: 'node',
+    module: false,
     distPath: {
       root: distPath,
     },
