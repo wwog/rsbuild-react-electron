@@ -85,6 +85,7 @@ export class Store {
     this.disposer.add(() => {
       //@ts-expect-error clear is private
       this.store = null
+      Store.instance = null as any
     })
   }
 

@@ -48,6 +48,7 @@ export class Windows {
       ipcMain.removeAllListeners(SendChannel.MaximizeWindow)
       ipcMain.removeAllListeners(SendChannel.RestoreWindow)
       ipcMain.removeAllListeners(SendChannel.MinimizeWindow)
+      ipcMain.removeHandler(InvokeChannel.GetWindowMaximized)
     })
   }
 

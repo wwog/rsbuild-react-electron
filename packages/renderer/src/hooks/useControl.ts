@@ -1,4 +1,4 @@
-import { type SetStateAction, useCallback, useState } from 'react'
+import { type SetStateAction, useCallback, useRef, useState } from 'react'
 
 export interface UseControlOptions<T> {
   defaultValue?: T
@@ -33,20 +33,30 @@ export function useControl<T = any>(
     return defaultValue
   })
 
-  const setValue = useCallback((newValue: SetStateAction<T>) => {
-    let _value = newValue
-    if (typeof newValue === 'function') {
-      _value = (newValue as (prevState: T) => T)(state)
-    }
+  const stateRef = useRef(state)
+  stateRef.current = state
+  const isControlledRef = useRef(isControlled)
+  isControlledRef.current = isControlled
+  const propsRef = useRef(props)
+  propsRef.current = props
 
-    if (!isControlled) {
-      setState(_value)
-    }
+  const setValue = useCallback(
+    (newValue: SetStateAction<T>) => {
+      const _value =
+        typeof newValue === 'function'
+          ? (newValue as (prevState: T) => T)(stateRef.current)
+          : newValue
 
-    if (props[triggerKey]) {
-      props[triggerKey](_value)
-    }
-  }, [])
+      if (!isControlledRef.current) {
+        setState(_value)
+      }
+
+      if (propsRef.current[triggerKey]) {
+        propsRef.current[triggerKey](_value)
+      }
+    },
+    [triggerKey],
+  )
 
   const realValue = isControlled ? value : state
 

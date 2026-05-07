@@ -21,7 +21,7 @@ export interface LayoutProps {
 
 export const Layout: FC<LayoutProps> = (props) => {
   const { children } = props
-  const [ctx] = useState(new Context())
+  const [ctx] = useState(() => new Context())
 
   useSetupSwitchDevTools()
 

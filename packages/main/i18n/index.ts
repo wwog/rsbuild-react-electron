@@ -102,7 +102,7 @@ export class I18n {
 
     ipcMain.handle(InvokeChannel.SetI18n, this.setI18n)
     this.disposer.add(() => {
-      ipcMain.removeListener(InvokeChannel.SetI18n, this.setI18n)
+      ipcMain.removeHandler(InvokeChannel.SetI18n)
     })
   }
 

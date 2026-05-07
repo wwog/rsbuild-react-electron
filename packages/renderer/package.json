@@ -1,6 +1,7 @@
 {
   "name": "renderer",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "rsbuild dev -c rsbuild.react.config.ts",
     "build": "rsbuild build -c rsbuild.react.config.ts",

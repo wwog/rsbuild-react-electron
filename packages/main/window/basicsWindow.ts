@@ -29,7 +29,7 @@ export abstract class BasicsWindow {
     title: pkgJson.name,
     webPreferences: {
       preload: resolvePreloadPath(),
-      webSecurity: false,
+      webSecurity: !isStrictDev(),
     },
   }
 
