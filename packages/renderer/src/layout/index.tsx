@@ -30,7 +30,7 @@ export const Layout: FC<LayoutProps> = (props) => {
       <AppProvider context={ctx}>
         <CssBaseline />
         <ErrorBoundary
-          fallbackRender={FallbackRender}
+          fallbackRender={(props) => <FallbackRender {...props} />}
           onError={(info) => {
             Logger.error('ErrorBoundary', info)
           }}

@@ -9,7 +9,9 @@ export const FallbackRender: FC<FallbackProps> = ({
   return (
     <div>
       <p>Something went wrong:</p>
-      <pre style={{ color: 'red' }}>{error.message}</pre>
+      <pre style={{ color: 'red' }}>
+        {error instanceof Error ? error.message : 'Unknown error'}
+      </pre>
       <button onClick={resetErrorBoundary}>Try again</button>
     </div>
   )

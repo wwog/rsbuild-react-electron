@@ -1,7 +1,7 @@
 import { Box, Card, Stack, Typography } from '@mui/material'
+import { SizeBox } from '@wwog/react'
 import type { FC } from 'react'
 import { LocaleSelect } from '../../components/LocaleSelect'
-import { SizeBox } from '../../components/SizeBox'
 import { useI18nContext } from '../../context/hook'
 
 //#region component Types
@@ -20,18 +20,24 @@ export const SettingPage: FC<SettingPageProps> = (_props) => {
         }}
       >
         <Stack
-          direction={'row'}
-          alignItems={'center'}
-          justifyContent={'space-between'}
+          component="div"
+          direction="row"
+          sx={{
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         >
           <Typography>{messages.Language}</Typography>
           <LocaleSelect />
         </Stack>
         <SizeBox h={12} />
         <Stack
-          direction={'row'}
-          alignItems={'center'}
-          justifyContent={'space-between'}
+          component="div"
+          direction="row"
+          sx={{
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
         >
           <Typography>{messages.Theme}</Typography>
         </Stack>

@@ -19,7 +19,7 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "outDir": "output",
-    "types": ["./packages/@types/global.d.ts"]
+    "types": ["node", "./packages/@types/global.d.ts"]
   },
   "include": ["./scripts/**/*"],
   "exclude": ["release/build", "release/app/dist"]

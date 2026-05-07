@@ -11,10 +11,10 @@ import ExtensionIcon from '@mui/icons-material/Extension'
 import HomeIcon from '@mui/icons-material/Home'
 import SettingsIcon from '@mui/icons-material/Settings'
 import { Box, Stack, Typography } from '@mui/material'
+import { ArrayRender } from '@wwog/react'
 import { type FC, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router'
 import logoSrc from '../../../assets/logo.png'
-import { ArrayRender } from '../../../components/ArrayRender'
 import { RouterPath } from '../../../constant/main'
 import { useI18nContext } from '../../../context/hook'
 
@@ -107,7 +107,6 @@ export const Nav: FC<NavProps> = () => {
                 <Stack
                   component="div"
                   direction="row"
-                  alignItems="center"
                   spacing={2}
                   sx={{
                     width: '100%',
