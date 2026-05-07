@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import { app } from 'electron'
 import { Logger } from 'logger/main'
-import { bootstrap } from './utils/bootstrap'
+import { bootstrap } from './bootstrap'
 
 const cacheRoot = resolve(app.getPath('userData'), 'CacheRoot')
 

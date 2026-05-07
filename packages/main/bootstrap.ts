@@ -2,7 +2,7 @@ import { dirname, resolve } from 'node:path'
 import { UnhandledError, UnhandledRejection } from 'common/errors'
 import { app } from 'electron'
 import { Logger } from 'logger/main'
-import { Core } from '../core'
+import { Core } from './core'
 
 export async function bootstrap(cacheRoot: string) {
   const loggerRoot = resolve(cacheRoot, 'logs')
