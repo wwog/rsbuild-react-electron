@@ -15,10 +15,8 @@
     "skipLibCheck": true,
     "isolatedModules": true,
     "noEmit": true,
-    "noImplicitAny": false,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "outDir": "output",
     "types": ["node", "./packages/@types/global.d.ts"]
   },
   "include": ["./scripts/**/*"],

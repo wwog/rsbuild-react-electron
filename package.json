@@ -2,7 +2,7 @@
   "name": "rsbuild-electron",
   "private": true,
   "engines": {
-    "node": ">=24.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "start": "concurrently \"pnpm run:renderer\" \"pnpm run:main\"",

@@ -9,7 +9,8 @@ console.log('Linking node_modules from app to src', {
 })
 if (!fs.existsSync(srcNodeModules) && fs.existsSync(appNodeModules)) {
   try {
-    fs.symlinkSync(appNodeModules, srcNodeModules, 'junction')
+    const symlinkType = process.platform === 'win32' ? 'junction' : 'dir'
+    fs.symlinkSync(appNodeModules, srcNodeModules, symlinkType)
     console.log('Symlink Result: Ok')
   } catch (error) {
     console.error('Symlink Error: ', error)

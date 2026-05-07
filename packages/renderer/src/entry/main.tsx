@@ -23,9 +23,8 @@ const router = createMemoryRouter([
       <Layout>
         <Stack
           direction="row"
-          sx={(theme) => {
-            console.log('view theme', theme)
-            return { height: '100%' }
+          sx={{
+            height: '100%',
           }}
         >
           <Nav />

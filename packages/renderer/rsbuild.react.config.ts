@@ -49,7 +49,7 @@ export default defineConfig({
       root: distPath,
     },
     dataUriLimit: {
-      image: 1024,
+      image: 8192,
       media: 0,
     },
   },

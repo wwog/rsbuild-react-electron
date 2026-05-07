@@ -6,7 +6,7 @@ corepack enable
 corepack install
 
 # start
-pnpm dev
+pnpm start
 
 # build
 pnpm build[:dev]
