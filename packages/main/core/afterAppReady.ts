@@ -1,12 +1,8 @@
 import { ipcMain } from 'electron'
-import type { Core } from '.'
-import { Windows } from './windows'
 import { SendChannel } from '../../common/constant'
+import type { Core } from '.'
 
 export function afterAppReady(core: Core) {
-
-  
-
   register(core)
 }
 
@@ -19,7 +15,6 @@ function register(core: Core) {
     e.sender.openDevTools()
   })
 
-  
   core.disposer.add(() => {
     ipcMain.removeHandler(SendChannel.SwitchDevTools)
   })

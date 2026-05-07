@@ -1,6 +1,6 @@
+import { join, resolve } from 'node:path'
 import { app } from 'electron'
 import { getPort, isDev } from '../../common/env'
-import { join, resolve } from 'node:path'
 
 /**
  * @description only in `development` and `not packaged`
@@ -23,7 +23,6 @@ export function resolveHtmlPath(filename: string) {
   const _filename = filename.endsWith('.html') ? filename : `${filename}.html`
   return `file://${resolve(__dirname, '../renderer/', _filename)}`
 }
-
 
 export function resolvePreloadPath(): string {
   return app.isPackaged

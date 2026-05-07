@@ -1,7 +1,7 @@
-import { defineConfig } from '@rsbuild/core'
-import { pluginReact } from '@rsbuild/plugin-react'
 import { readdirSync } from 'node:fs'
 import { basename, extname, resolve } from 'node:path'
+import { defineConfig } from '@rsbuild/core'
+import { pluginReact } from '@rsbuild/plugin-react'
 import { createExternal, paths } from '../../scripts/buildUtils'
 import { getPort } from '../common/env'
 

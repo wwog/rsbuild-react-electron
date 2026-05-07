@@ -1,15 +1,15 @@
-import type { FC } from 'react'
 import { Box, Card, Stack, Typography } from '@mui/material'
-import { useI18nContext } from '../../context/hook'
+import type { FC } from 'react'
 import { LocaleSelect } from '../../components/LocaleSelect'
 import { SizeBox } from '../../components/SizeBox'
+import { useI18nContext } from '../../context/hook'
 
 //#region component Types
 export interface SettingPageProps {}
 //#endregion component Types
 
 //#region component
-export const SettingPage: FC<SettingPageProps> = (props) => {
+export const SettingPage: FC<SettingPageProps> = (_props) => {
   const { messages } = useI18nContext()
   return (
     <Box>

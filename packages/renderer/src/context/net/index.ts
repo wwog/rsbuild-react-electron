@@ -1,6 +1,6 @@
+import { axiosRequestAdapter } from '@alova/adapter-axios'
 import { createAlova } from 'alova'
 import ReactHook from 'alova/react'
-import { axiosRequestAdapter } from '@alova/adapter-axios'
 import { Logger } from 'logger/renderer'
 import type { Context } from '../context'
 

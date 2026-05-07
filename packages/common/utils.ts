@@ -85,4 +85,3 @@ export class StackTrace {
     console.log(this.toString(excludeItems))
   }
 }
-

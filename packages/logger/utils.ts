@@ -139,7 +139,7 @@ const handleCircular = () => {
 export const stringify = (data: any) => {
   try {
     return JSON.stringify(data, handleCircular(), 2)
-  } catch (error) {
+  } catch (_error) {
     return data
   }
 }

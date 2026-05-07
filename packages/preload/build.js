@@ -8,7 +8,7 @@ const isForce = process.argv.includes('--force')
 const cacheValidTime = 24 * 60 * 60 * 1000
 const preloadDir = path.resolve(__dirname)
 const cache = path.resolve(__dirname, './.cache')
-const appPackage = path.resolve(preloadDir, "../../app/package.json");
+const appPackage = path.resolve(preloadDir, '../../app/package.json')
 const distDir = path.resolve(preloadDir, '../../app/preload')
 const { size: preloadSize, lastUpdatedTime } = checkDir(preloadDir)
 const preloadPath = path.resolve(distDir, 'preload.js')
@@ -88,7 +88,7 @@ function shouldBuild() {
       console.log('Preload cache expired, should be build')
       return true
     }
-  } catch (error) {
+  } catch (_error) {
     return true
   }
 

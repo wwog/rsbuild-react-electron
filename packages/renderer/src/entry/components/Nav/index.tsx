@@ -5,19 +5,18 @@ import {
   HomeOutlined,
   SettingsOutlined,
 } from '@mui/icons-material'
-import { useMemo, type FC } from 'react'
-import { useI18nContext } from '../../../context/hook'
-import { Box, Stack, Typography } from '@mui/material'
-import { ArrayRender } from '../../../components/ArrayRender'
-import { useLocation, useNavigate } from 'react-router'
-import { RouterPath } from '../../../constant/main'
-
-import logoSrc from '../../../assets/logo.png'
-import HomeIcon from '@mui/icons-material/Home'
 import AccountTreeIcon from '@mui/icons-material/AccountTree'
 import DownloadIcon from '@mui/icons-material/Download'
 import ExtensionIcon from '@mui/icons-material/Extension'
+import HomeIcon from '@mui/icons-material/Home'
 import SettingsIcon from '@mui/icons-material/Settings'
+import { Box, Stack, Typography } from '@mui/material'
+import { type FC, useMemo } from 'react'
+import { useLocation, useNavigate } from 'react-router'
+import logoSrc from '../../../assets/logo.png'
+import { ArrayRender } from '../../../components/ArrayRender'
+import { RouterPath } from '../../../constant/main'
+import { useI18nContext } from '../../../context/hook'
 
 //#region component Types
 export interface NavProps {}
@@ -28,7 +27,7 @@ export const Nav: FC<NavProps> = () => {
   const { messages } = useI18nContext()
   const { pathname } = useLocation()
   const navigate = useNavigate()
-  
+
   const items = useMemo(() => {
     return [
       {

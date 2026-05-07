@@ -4,12 +4,7 @@
   "icon": "assets/icons/256x256.png",
   "copyright": "Copyright © 2024 Application",
   "npmRebuild": false,
-  "files": [
-    "main",
-    "preload",
-    "renderer",
-    "node_modules"
-  ],
+  "files": ["main", "preload", "renderer", "node_modules"],
   "directories": {
     "app": "app",
     "output": "release",
@@ -21,9 +16,7 @@
       "to": "."
     }
   ],
-  "extraResources": [
-    "./assets/**"
-  ],
+  "extraResources": ["./assets/**"],
   "asar": false,
   "nsis": {
     "perMachine": true,
@@ -36,10 +29,7 @@
     "createStartMenuShortcut": true
   },
   "win": {
-    "target": [
-      "zip",
-      "nsis"
-    ],
+    "target": ["zip", "nsis"],
     "artifactName": "${productName}_Win_${arch}_64bit_V${version}.${ext}"
   },
   "mac": {
@@ -47,10 +37,7 @@
     "icon": "assets/icons/512x512.png",
     "target": {
       "target": "default",
-      "arch": [
-        "arm64",
-        "x64"
-      ]
+      "arch": ["arm64", "x64"]
     },
     "extendInfo": {
       "NSCameraUsageDescription": "This app requires camera access to record video.",

@@ -1,7 +1,7 @@
 import { Logger } from 'logger/main'
 import { Page } from '../../common/constant'
-import { BasicsWindow } from './basicsWindow'
 import type { Windows } from '../core/windows'
+import { BasicsWindow } from './basicsWindow'
 
 export class MainWindow extends BasicsWindow {
   saveBounds = true

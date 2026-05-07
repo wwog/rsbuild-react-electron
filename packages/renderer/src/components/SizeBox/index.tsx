@@ -1,5 +1,5 @@
 import { Logger } from 'logger/renderer'
-import { memo, type FC } from 'react'
+import { type FC, memo } from 'react'
 
 //#region component Types
 export interface SizeBoxProps {

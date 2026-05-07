@@ -1,6 +1,6 @@
 import { Logger } from 'logger/renderer'
-import { Net } from './net'
 import { Nc } from './nc'
+import { Net } from './net'
 
 export class Context {
   net: Net

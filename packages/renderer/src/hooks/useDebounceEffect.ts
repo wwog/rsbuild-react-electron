@@ -1,5 +1,4 @@
-import { useEffect, useRef } from "react"
-
+import { useEffect, useRef } from 'react'
 
 export function useDebounceEffect(fn: () => void, delay: number, deps: any[]) {
   const timer = useRef<any | null>(null)

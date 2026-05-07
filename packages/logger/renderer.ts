@@ -1,8 +1,8 @@
 import {
   type LoggerData,
   LoggerLevelEnum,
-  RenderChannel,
   type LoggerPayload,
+  RenderChannel,
   type RendererLoggerOptions,
 } from './types'
 import { getLoggerData } from './utils'
@@ -30,7 +30,7 @@ export class Logger {
     transformer(data) {
       return rendererTransformer(data)
     },
-    //@ts-ignore
+    //@ts-expect-error
     ipcRendererSend: window.api.ipcRenderer.send,
   }
   static setOptions(options: RendererLoggerOptions) {

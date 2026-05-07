@@ -21,13 +21,13 @@ export function useControl<T = any>(
   } = options
 
   const value = props[valueKey] as T
-  const isControlled = Object.prototype.hasOwnProperty.call(props, valueKey)
+  const isControlled = Object.hasOwn(props, valueKey)
 
   const [state, setState] = useState<T>(() => {
     if (isControlled) {
       return value
     }
-    if (Object.prototype.hasOwnProperty.call(props, defaultValueKey)) {
+    if (Object.hasOwn(props, defaultValueKey)) {
       return props[defaultValueKey]
     }
     return defaultValue

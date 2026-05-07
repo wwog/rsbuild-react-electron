@@ -1,7 +1,7 @@
 import { Logger } from 'logger/renderer'
+import type { BroadcastData } from '../../../../@types/global'
 import { Disposer } from '../../../../common/utils'
 import { Emitter } from './emitter'
-import type { BroadcastData } from '../../../../@types/global'
 
 /**
  * ```

@@ -1,17 +1,17 @@
+import { readdir, stat, unlink } from 'node:fs/promises'
 import path from 'node:path'
+import { app, ipcMain } from 'electron'
+import { StackTrace } from '../common/utils'
+import { appendToFile } from './nodeUtils'
 import {
   type LoggerData,
   LoggerLevelEnum,
   type LoggerOptions,
-  type ProcessTag,
   type LoggerPayload,
+  type ProcessTag,
   RenderChannel,
 } from './types'
 import { getLoggerData } from './utils'
-import { ipcMain, app } from 'electron'
-import { appendToFile } from './nodeUtils'
-import { readdir, stat, unlink } from 'node:fs/promises'
-import { StackTrace } from '../common/utils'
 
 const bold = '\x1b[1m'
 const green = '\x1b[32m'
@@ -110,8 +110,8 @@ export class Logger {
     Logger.info('Start Remove logDir 7 days ago')
     let files: string[] = []
     try {
-       files = await readdir(logDir)
-    } catch (error) {
+      files = await readdir(logDir)
+    } catch (_error) {
       Logger.info('No log files to remove')
       return
     }
@@ -165,7 +165,7 @@ export class Logger {
     try {
       const { logArr, writeStr } = this.options.transformer(dataObj)
 
-      let extraText: string | undefined = undefined
+      let extraText: string | undefined
       switch (level) {
         case LoggerLevelEnum.INFO:
           console.log(...logArr)

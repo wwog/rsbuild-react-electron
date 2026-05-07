@@ -1,9 +1,9 @@
+import { ipcMain } from 'electron'
 import { Logger } from 'logger/main'
-import { InvokeChannel, SendChannel, type Page } from '../../common/constant'
+import { InvokeChannel, type Page, SendChannel } from '../../common/constant'
+import { Disposer } from '../../common/utils'
 import type { BasicsWindow } from '../window/basicsWindow'
 import { MainWindow } from '../window/mainWindow'
-import { ipcMain } from 'electron'
-import { Disposer } from '../../common/utils'
 
 export class Windows {
   logger = Logger.scope('Windows')

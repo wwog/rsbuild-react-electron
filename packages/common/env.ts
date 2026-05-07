@@ -35,7 +35,6 @@ export function getCPUArch(): string {
   return process.arch
 }
 
-
 export function getPort() {
   return Number(process.env.PORT) || 8163
 }

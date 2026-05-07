@@ -1,5 +1,5 @@
-import type { FC } from 'react'
 import { Box, MenuItem, Select } from '@mui/material'
+import type { FC } from 'react'
 import { useI18nContext } from '../../context/hook'
 
 export const LocaleSelect: FC = () => {
@@ -10,7 +10,6 @@ export const LocaleSelect: FC = () => {
         size="small"
         name="Language"
         value={lang}
-        
         onChange={(item) => {
           setLang(item.target.value)
         }}

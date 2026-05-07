@@ -1,19 +1,19 @@
-import { Logger } from 'logger/main'
-import type { Core } from '../core'
-import type { I18nMessages, SupportedLanguage } from '../../@types/global'
-import {
-  loadMessagesEN,
-  loadMessagesKO,
-  loadMessagesZhCN,
-  loadMessagesZhTW,
-} from './loader'
 import { ipcMain } from 'electron'
+import { Logger } from 'logger/main'
+import type { I18nMessages, SupportedLanguage } from '../../@types/global'
 import {
   BroadcastType,
   InvokeChannel,
   SyncChannel,
 } from '../../common/constant'
 import { Disposer } from '../../common/utils'
+import type { Core } from '../core'
+import {
+  loadMessagesEN,
+  loadMessagesKO,
+  loadMessagesZhCN,
+  loadMessagesZhTW,
+} from './loader'
 
 export class I18n {
   public core: Core

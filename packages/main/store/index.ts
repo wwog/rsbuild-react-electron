@@ -1,9 +1,8 @@
-import ElectronStore from 'electron-store'
-
-import { Logger } from 'logger/main'
 import { ipcMain } from 'electron'
-import { Disposer } from '../../common/utils'
+import ElectronStore from 'electron-store'
+import { Logger } from 'logger/main'
 import { InvokeChannel } from '../../common/constant'
+import { Disposer } from '../../common/utils'
 
 interface StoreSchema {
   theme: 'dark' | 'light'

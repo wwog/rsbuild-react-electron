@@ -1,10 +1,10 @@
 import { app } from 'electron'
 import { Logger } from 'logger/main'
-import { Store } from '../store'
 import { Disposer } from '../../common/utils'
+import { I18n } from '../i18n'
+import { Store } from '../store'
 import { afterAppReady } from './afterAppReady'
 import { Windows } from './windows'
-import { I18n } from '../i18n'
 
 const args = process.argv.slice(2)
 

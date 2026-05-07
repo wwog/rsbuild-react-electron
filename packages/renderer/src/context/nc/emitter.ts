@@ -11,11 +11,11 @@ class UniqueContainer<T> {
   stack?: StackTrace
   public id = id++
   public dispose: () => void = () => {
-    //@ts-ignore
+    //@ts-expect-error
     this.stack = null
-    //@ts-ignore
+    //@ts-expect-error
     this.dispose = null
-    //@ts-ignore
+    //@ts-expect-error
     this.value = null
   }
   constructor(public readonly value: T) {}
@@ -163,7 +163,7 @@ export class Emitter<T = undefined> {
   get event(): Event<T> {
     this._event ??= (listener: (e: T) => any, thisArgs?: any) => {
       if (thisArgs) {
-        //biome-ignore lint/style/noParameterAssign: <explanation>
+        //biome-ignore lint/style/noParameterAssign: <没有问题>
         listener = listener.bind(thisArgs)
       }
 

@@ -1,6 +1,6 @@
 import { ipcRenderer } from 'electron'
-import { type BroadcastType, SendChannel } from '../common/constant'
 import type { BroadcastData } from '../@types/global'
+import { type BroadcastType, SendChannel } from '../common/constant'
 
 export const preloadIpcRenderer = {
   send(channel: string, ...args: any[]) {

@@ -115,7 +115,7 @@ async function* lineReader(filePath: string) {
 /**
  * @description 流式转换csv文件到json文件
  * @description_en Stream conversion of csv file to json file
- * @param config 
+ * @param config
  */
 export async function translate(config: Config) {
   const { file_path, out_dir } = config

@@ -1,14 +1,14 @@
 import {
   BrowserWindow,
-  shell,
   type BrowserWindowConstructorOptions,
+  shell,
 } from 'electron'
-import { type Page, SendChannel } from '../../common/constant'
 import type { Logger } from 'logger/main'
-import { isStrictDev, resolveHtmlPath, resolvePreloadPath } from '../utils/path'
 import pkgJson from '../../../app/package.json'
-import { Store } from '../store'
+import { type Page, SendChannel } from '../../common/constant'
 import type { Windows } from '../core/windows'
+import { Store } from '../store'
+import { isStrictDev, resolveHtmlPath, resolvePreloadPath } from '../utils/path'
 
 export abstract class BasicsWindow {
   abstract page: Page
@@ -123,7 +123,7 @@ export abstract class BasicsWindow {
       this.browserWindow?.show()
     })
 
-    this.browserWindow.on('close', (event) => {
+    this.browserWindow.on('close', (_event) => {
       if (this.saveBounds) {
         const bounds = this.browserWindow?.getBounds()
         if (!bounds) {

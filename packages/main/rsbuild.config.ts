@@ -1,7 +1,7 @@
 import { resolve } from 'node:path'
 import { defineConfig } from '@rsbuild/core'
-import { paths } from '../../scripts/paths'
 import { createExternal } from '../../scripts/buildUtils'
+import { paths } from '../../scripts/paths'
 
 const distPath = resolve(paths.appDir, 'main')
 

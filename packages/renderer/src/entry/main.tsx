@@ -1,20 +1,20 @@
+import { Box, Stack } from '@mui/material'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HomePage } from '../page/main/home'
-import { Layout } from '../layout'
 import {
   createMemoryRouter,
   Navigate,
   Outlet,
   RouterProvider,
 } from 'react-router'
-import { Box, Stack } from '@mui/material'
-import { Nav } from './components/Nav'
 import { RouterPath } from '../constant/main'
-import { ProjectPage } from '../page/main/project'
-import { PluginPage } from '../page/main/plugin'
-import { SettingPage } from '../page/main/setting'
+import { Layout } from '../layout'
+import { HomePage } from '../page/main/home'
 import { InstallPage } from '../page/main/install'
+import { PluginPage } from '../page/main/plugin'
+import { ProjectPage } from '../page/main/project'
+import { SettingPage } from '../page/main/setting'
+import { Nav } from './components/Nav'
 
 const router = createMemoryRouter([
   {

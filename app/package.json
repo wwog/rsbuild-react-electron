@@ -9,6 +9,5 @@
     "rebuild": "tsx ../scripts/electron-rebuild.ts",
     "postinstall": "npm run rebuild && npm run link-module"
   },
-  "dependencies": {
-  }
+  "dependencies": {}
 }
