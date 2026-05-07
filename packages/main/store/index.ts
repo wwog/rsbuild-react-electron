@@ -31,7 +31,7 @@ export class Store {
   disposer = new Disposer(this.logger)
 
   private constructor() {
-    this.store = new ElectronStore<any>({
+    this.store = new ElectronStore<StoreSchema>({
       schema: {
         theme: {
           type: 'string',

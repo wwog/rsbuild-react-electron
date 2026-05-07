@@ -5,7 +5,7 @@
     "lib": ["ESNext", "DOM"],
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "types": ["node", "../global.d.ts"]
+    "types": ["node"]
   },
   "include": ["**/*.ts", "../common/**/*.ts", "../global.d.ts"]
 }

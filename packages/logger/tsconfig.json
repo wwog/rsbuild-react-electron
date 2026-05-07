@@ -6,7 +6,7 @@
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
     "allowJs": true,
-    "types": ["../global.d.ts"]
+    "types": ["node"]
   },
   "include": ["**/*.ts"]
 }

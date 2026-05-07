@@ -26,6 +26,7 @@ export function useSetupSwitchDevTools() {
     return () => {
       if (isSetupSwitchDevTools) {
         window.removeEventListener('keydown', handle)
+        isSetupSwitchDevTools = false
       }
     }
   }, [])

@@ -2,8 +2,8 @@ import { BroadcastType, InvokeChannel, SyncChannel } from 'common/constant'
 import { Disposer } from 'common/utils'
 import { ipcMain } from 'electron'
 import { Logger } from 'logger/main'
+import type { I18nMessages, SupportedLanguage } from '../../global'
 import type { Core } from '../core'
-import type { I18nMessages, SupportedLanguage } from '../global'
 import {
   loadMessagesEN,
   loadMessagesKO,
@@ -43,7 +43,7 @@ export class I18n {
       this.core.store!.set('lang', lang)
     } else {
       this.logger.error('unsupported lang', lang)
-      throw `unsupported lang${lang}`
+      throw new Error(`unsupported lang: ${lang}`)
     }
   }
 

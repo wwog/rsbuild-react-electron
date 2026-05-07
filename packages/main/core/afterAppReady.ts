@@ -16,6 +16,6 @@ function register(core: Core) {
   })
 
   core.disposer.add(() => {
-    ipcMain.removeHandler(SendChannel.SwitchDevTools)
+    ipcMain.removeAllListeners(SendChannel.SwitchDevTools)
   })
 }

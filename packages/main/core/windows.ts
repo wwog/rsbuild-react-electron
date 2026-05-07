@@ -44,10 +44,10 @@ export class Windows {
     })
 
     this.disposer.add(() => {
-      ipcMain.removeHandler(SendChannel.CloseWindow)
-      ipcMain.removeHandler(SendChannel.MaximizeWindow)
-      ipcMain.removeHandler(SendChannel.RestoreWindow)
-      ipcMain.removeHandler(SendChannel.MinimizeWindow)
+      ipcMain.removeAllListeners(SendChannel.CloseWindow)
+      ipcMain.removeAllListeners(SendChannel.MaximizeWindow)
+      ipcMain.removeAllListeners(SendChannel.RestoreWindow)
+      ipcMain.removeAllListeners(SendChannel.MinimizeWindow)
     })
   }
 

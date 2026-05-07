@@ -1,3 +1,4 @@
+import type { BroadcastType } from 'common/constant'
 import type i18nMessages from './i18n/out/en.json'
 
 export type I18nMessages = typeof i18nMessages
