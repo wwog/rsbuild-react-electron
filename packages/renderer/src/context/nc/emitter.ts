@@ -1,5 +1,5 @@
-import { compose } from '../../../../common/functional'
-import { StackTrace } from '../../../../common/utils'
+import { compose } from 'common/functional'
+import { StackTrace } from 'common/utils'
 
 export type Event<T> = (
   listener: (e: T) => any,

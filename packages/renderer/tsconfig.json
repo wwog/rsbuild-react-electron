@@ -4,7 +4,12 @@
     "target": "ES2020",
     "lib": ["DOM", "ES2022"],
     "jsx": "react-jsx",
-    "types": ["../@types/global.d.ts"]
+    "types": ["node", "../global.d.ts"]
   },
-  "include": ["src", "../common/**/*.ts", "../preload/**/*.ts"]
+  "include": [
+    "src",
+    "../common/**/*.ts",
+    "../preload/**/*.ts",
+    "../global.d.ts"
+  ]
 }

@@ -1,5 +1,5 @@
+import { SendChannel } from 'common/constant'
 import { useEffect } from 'react'
-import { SendChannel } from '../../../common/constant'
 
 const { ipcRenderer } = window.api
 

@@ -1,3 +1,4 @@
+import { type Page, SendChannel } from 'common/constant'
 import {
   BrowserWindow,
   type BrowserWindowConstructorOptions,
@@ -5,7 +6,6 @@ import {
 } from 'electron'
 import type { Logger } from 'logger/main'
 import pkgJson from '../../../app/package.json'
-import { type Page, SendChannel } from '../../common/constant'
 import type { Windows } from '../core/windows'
 import { Store } from '../store'
 import { isStrictDev, resolveHtmlPath, resolvePreloadPath } from '../utils/path'

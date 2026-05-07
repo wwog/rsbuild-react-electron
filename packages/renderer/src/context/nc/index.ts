@@ -1,6 +1,6 @@
+import { Disposer } from 'common/utils'
 import { Logger } from 'logger/renderer'
-import type { BroadcastData } from '../../../../@types/global'
-import { Disposer } from '../../../../common/utils'
+import type { BroadcastData } from '../../../../global'
 import { Emitter } from './emitter'
 
 /**

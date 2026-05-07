@@ -5,5 +5,8 @@
     "build:dev": "cross-env NODE_ENV=development node ./build.js",
     "build:force": "node ./build.js --force",
     "build:dev:force": "cross-env NODE_ENV=development node ./build.js --force"
+  },
+  "dependencies": {
+    "common": "workspace:*"
   }
 }

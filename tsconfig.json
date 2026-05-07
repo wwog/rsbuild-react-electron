@@ -17,8 +17,15 @@
     "noEmit": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "types": ["node", "./packages/@types/global.d.ts"]
+    "types": ["node"]
   },
-  "include": ["./scripts/**/*"],
-  "exclude": ["release/build", "release/app/dist"]
+  "include": ["./scripts/**/*", "./packages/global.d.ts"],
+  "exclude": [
+    "release/build",
+    "release/app/dist",
+    "node_modules",
+    "**/node_modules",
+    "**/dist",
+    "**/out"
+  ]
 }

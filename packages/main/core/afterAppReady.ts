@@ -1,5 +1,5 @@
+import { SendChannel } from 'common/constant'
 import { ipcMain } from 'electron'
-import { SendChannel } from '../../common/constant'
 import type { Core } from '.'
 
 export function afterAppReady(core: Core) {

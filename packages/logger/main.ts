@@ -1,7 +1,7 @@
 import { readdir, stat, unlink } from 'node:fs/promises'
 import path from 'node:path'
+import { StackTrace } from 'common/utils'
 import { app, ipcMain } from 'electron'
-import { StackTrace } from '../common/utils'
 import { appendToFile } from './nodeUtils'
 import {
   type LoggerData,

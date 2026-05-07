@@ -1,4 +1,10 @@
 import {
+  BroadcastType,
+  InvokeChannel,
+  SendChannel,
+  SyncChannel,
+} from 'common/constant'
+import {
   createContext,
   type FC,
   useCallback,
@@ -6,13 +12,7 @@ import {
   useEffect,
   useState,
 } from 'react'
-import type { I18nMessages, SupportedLanguage } from '../../../@types/global'
-import {
-  BroadcastType,
-  InvokeChannel,
-  SendChannel,
-  SyncChannel,
-} from '../../../common/constant'
+import type { I18nMessages, SupportedLanguage } from '../../../global'
 import type { Context } from './context'
 
 const { ipcRenderer } = window.api

@@ -1,0 +1,12 @@
+{
+  "name": "common",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./constant": "./constant.ts",
+    "./errors": "./errors.ts",
+    "./utils": "./utils.ts",
+    "./functional": "./functional.ts",
+    "./env": "./env.ts"
+  }
+}

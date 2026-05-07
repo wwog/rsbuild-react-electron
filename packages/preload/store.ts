@@ -1,5 +1,5 @@
+import { InvokeChannel } from 'common/constant'
 import { ipcRenderer } from 'electron'
-import { InvokeChannel } from '../common/constant'
 
 export const preloadStore = {
   get(key: string) {

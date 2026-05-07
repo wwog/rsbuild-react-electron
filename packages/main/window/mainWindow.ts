@@ -1,5 +1,5 @@
+import { Page } from 'common/constant'
 import { Logger } from 'logger/main'
-import { Page } from '../../common/constant'
 import type { Windows } from '../core/windows'
 import { BasicsWindow } from './basicsWindow'
 

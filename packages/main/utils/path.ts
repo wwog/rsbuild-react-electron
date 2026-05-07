@@ -1,6 +1,6 @@
 import { join, resolve } from 'node:path'
+import { getPort, isDev } from 'common/env'
 import { app } from 'electron'
-import { getPort, isDev } from '../../common/env'
 
 /**
  * @description only in `development` and `not packaged`

@@ -1,6 +1,6 @@
+import { Disposer } from 'common/utils'
 import { app } from 'electron'
 import { Logger } from 'logger/main'
-import { Disposer } from '../../common/utils'
 import { I18n } from '../i18n'
 import { Store } from '../store'
 import { afterAppReady } from './afterAppReady'

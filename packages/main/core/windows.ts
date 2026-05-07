@@ -1,7 +1,7 @@
+import { InvokeChannel, type Page, SendChannel } from 'common/constant'
+import { Disposer } from 'common/utils'
 import { ipcMain } from 'electron'
 import { Logger } from 'logger/main'
-import { InvokeChannel, type Page, SendChannel } from '../../common/constant'
-import { Disposer } from '../../common/utils'
 import type { BasicsWindow } from '../window/basicsWindow'
 import { MainWindow } from '../window/mainWindow'
 
